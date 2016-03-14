@@ -72,7 +72,7 @@ if [ $stage -le 1 ]; then
   for x in $dir/score_*/$name.ctm; do
     cp $x $dir/tmpf;
     cat $dir/tmpf | grep -i -v -E '\(NOISE|LAUGH|BREATH|COUGH\)' | \
-      grep -i -v -E '(UNK)' > $x;
+      grep -i -v -E '\(UNK\)' > $x;
   done
 fi
 
